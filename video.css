@@ -1,0 +1,120 @@
+/* 视频播放窗口 */
+.video-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: black;
+
+}
+/* 默认视频 */
+video{
+  width: 100%;
+    height:350px;
+}
+/* 视频播放控制 */
+#control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #1d1d1d;
+}
+#control div{
+  cursor: pointer;
+}
+/* 图标 */
+.c-icon{
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+#play{
+  background: url(icon/播放.png) no-repeat;
+  background-size: 100%;
+}
+#bigPlay{
+  cursor: pointer;
+  position: absolute;
+  z-index: 999;
+  width: 20%;
+}
+#pause{
+  display: none;
+  background: url(icon/暂停.png) no-repeat;
+  background-size: 100%;
+}
+#sound{
+  background: url(./img/sound.png) no-repeat;
+  background-size: 100%;
+}
+#mute{
+  display: none;
+  background: url(./img/mute.png) no-repeat;
+  background-size: 100%;
+}
+#fullScreen{
+  width: 18px;
+  height: 18px;
+  background: url(icon/全屏.png) no-repeat;
+  background-size: 100%;
+}
+#time{
+  margin-left: 8px;
+  color: white;
+}
+#progress{
+  overflow: hidden;
+  flex-grow: 1;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #333333;
+}
+#timeBar{
+  width: 0;
+  height: 10px;
+  background-color: tomato;
+}
+#soundBox{
+  overflow: hidden;
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #333333;
+}
+#soundBar{
+  width: 0;
+  height: 10px;
+  background-color: tomato;
+}
+@media (max-width: 576px) {
+  #soundBox{
+    width: 70px;
+  }
+  #time{
+    font-size: 14px;
+  }
+}
+@media (max-width: 420px) {
+  #control{
+    height: 32px;
+  }
+  .c-icon{
+    width: 18px;
+    height: 18px;
+    margin: 0 8px;
+  }
+  #fullScreen{
+    width: 14px;
+    height: 14px;
+  }
+  #time{
+    font-size: 12px;
+  }
+  #soundBox{
+    width: 50px;
+  }
+}
